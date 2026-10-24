@@ -1,0 +1,28 @@
+# Python environment and caches
+.venv/
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Generated data and experiment outputs
+/data/
+/checkpoints/
+/results/
+*.log
+
+# Local tests
+/tests/
+test_*.py
+
+# Editor and operating-system files
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

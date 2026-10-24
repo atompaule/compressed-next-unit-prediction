@@ -1,0 +1,19 @@
+[project]
+name = "masters-thesis"
+version = "0.1.0"
+description = "Experiments on compositional next-unit prediction and continuous representations"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=1.13.0",
+    "datasets>=4.8.4",
+    "huggingface-hub>=1.12.2",
+    "matplotlib>=3.10.9",
+    "numpy>=2.4.4",
+    "peft>=0.19.1",
+    "safetensors>=0.7.0",
+    "scipy>=1.17.1",
+    "torch>=2.12.0",
+    "tqdm>=4.67.3",
+    "transformers>=5.8.0",
+]

@@ -1,0 +1,78 @@
+{
+  "dataset": {
+    "repository": "allenai/dolma3_mix-6T",
+    "revision": "689a3ea2d8217e64d73a5058913fa43ad15e81aa",
+    "sources": {
+      "web": "common_crawl-",
+      "encyclopedia": "dolma1_7-wiki-en/",
+      "science": "olmocr_science_pdfs-"
+    }
+  },
+  "assets": {
+    "tokenizer": "openai-community/gpt2",
+    "tokenizer_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "segmenter": "segment-any-text/sat-3l-sm",
+    "segmenter_revision": "137da054051ad9f1eac42025f758db4ac9f22535",
+    "segmenter_tokenizer": "facebookAI/xlm-roberta-base",
+    "segmenter_tokenizer_revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+    "parser": "en_core_web_sm",
+    "parser_version": "3.8.0"
+  },
+  "data": {
+    "seed": 314159,
+    "documents_per_category": null,
+    "split_percentages": [
+      98,
+      1,
+      1
+    ],
+    "max_windows_per_document": 64,
+    "prefix_sentences": [
+      1,
+      4
+    ],
+    "target_sentences": 4,
+    "max_model_input_tokens": 1024,
+    "target_training_samples_approx": 2100000,
+    "calibration_documents_per_category": 128,
+    "target_token_budget_approx": 225000000,
+    "records_per_shard": 2048
+  },
+  "architecture": {
+    "vocab_size": 50257,
+    "n_embd": 512,
+    "n_head": 4,
+    "n_inner": 2048,
+    "n_layer": 8,
+    "n_positions": 1024
+  },
+  "training": {
+    "batch_windows": 128,
+    "microbatch_windows": 32,
+    "catalogue_block": 8192,
+    "peak_lr": 0.0003,
+    "dropout": 0.1,
+    "bf16": true,
+    "save_every": 64,
+    "monitor_samples": 512
+  },
+  "evaluation": {
+    "choices": 8,
+    "seed": 314159,
+    "qualitative_examples": 50,
+    "generation_tokens": 64,
+    "bootstrap_draws": 2000
+  },
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "conditions": [
+    "discrete",
+    "learned_6000",
+    "learned_12000",
+    "learned_18000",
+    "fixed_18000"
+  ]
+}
